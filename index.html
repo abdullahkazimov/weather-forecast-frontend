@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Teller</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="index.js"></script>
+        <link rel="shortcut icon" href="icon.png" type="image/png">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Weather Teller Application">
+        <meta name="keywords" content="weather teller application, web & mobile I, ADA University">
+    </head>
+    <body>
+        <div class = "container">
+            <div class="app-header" id = "app-header">
+                <h2>Use the following to get weather info</h2>
+            </div>
+            <div class="options">
+                <ul id = "options-list">
+                    <li id = "option-get-city">
+                        <button onclick="optionCityName()">City Name</button>
+                    </li>
+                    <li id = "option-get-coord">
+                        <button onclick="optionCoordinates()">Longitude & Latitude</button>
+                    </li>
+                    <li id = "option-get-geolocation">
+                        <button onclick="getGeolocation()">Geolocation API<br>(just click me)</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="phase2" id = "phase2-div">
+                <ul id="phase2-list">
+                    <li>
+                        <ul id="phase2-main">
+                            <li id = "enter-city-name">
+                                <h1>Enter city name 🏙️</h1>
+                                <input type="text" name="cityName" id="city-name" placeholder="Example: Baku"/>
+                                <br/> <br/>
+                                <button onclick="getCityName()">Submit</button>
+                            </li>
+                            <li id = "enter-coords">
+                                <h1>Enter coordinates 🗺️</h1>
+                                <input type="text" name="longitude" id="longitude" placeholder="Longitude"/>
+                                <br/> <br />
+                                <input type="text" name="latitude" id="latitude" placeholder="Latitude"/>
+                                <br/> <br/>
+                                <button onclick="getLonLat()">Submit</button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id = "result-div">
+                <p id="location">Loading...</p>
+                <ul id="result-main">
+                    <li>
+                            <p id="condition"><b>⛅️ Condition:</b> loading...</p>
+                            <p id="description"><b>📄 Description:</b> loading...</p>
+                            <p id="humidity"><b>💧 Humidity:</b> loading...</p>
+                            <p id="pressure"><b>📊 Pressure:</b> loading...</p>
+                            <br/>
+                            <p id="wind-speed"><b>🏎️ Wind Speed:</b> loading...</p>
+                            <p id="wind-direction"><b>🧭 Wind Direction:</b> loading...</p>
+                    </li>
+                    <li id = "result-right">
+                            <p id="temp"><b>🌡️ Temp:</b> loading...</p>
+                            <p id="min-temp"><b>📉 Min:</b> loading...</p>
+                            <p id="max-temp"><b>📈 Max:</b> loading...</p>
+                            <p id="real-feel"><b>😶‍🌫️ Feels like:</b> loading...</p>
+                            <br />
+                            <p id="special-note"><b>Special note:</b> loading...</p>
+                    </li>
+                </ul>
+                <p id="latest-response"><b>Latest Response:</b> loading...</p>
+            </div>
+            <div id = "restart">
+                <p>* Response may take a few seconds due to large amount of requests.<br/>Thank you for your patience.</p>
+                <button onclick="restart()">Try Again</button>
+            </div>
+        </div>
+    </body>
+</html>

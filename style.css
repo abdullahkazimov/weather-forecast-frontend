@@ -1,0 +1,166 @@
+body {
+    background-color: #87CEEB;
+    color: white;
+    margin-top: 5%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2:hover {
+    transition: 0.2s;
+    letter-spacing: 3px;
+}
+
+button {
+    border-radius: 20px;
+    border-width: 5px;
+    border-color:black;
+    font-size: 18px;
+}
+
+.app-header {
+    text-align: center;
+}
+
+#options-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#options-list>li {
+    padding-bottom: 15px;
+}
+
+button {
+    transition: 0.2s;
+    height: 100px;
+    width: 200px;
+    background-color: #87CEEB;
+    color: white;
+}
+
+button:hover {
+    transition: 0.2s;
+    height: 110px;
+    width: 210px;
+    background-color: green;
+    color: white;
+    font-size: large;
+    letter-spacing: 0.2px;
+}
+
+input {
+    font-size: large;
+    width: 250px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 20px;
+    border-color: white;
+}
+
+#phase2-list {
+    text-align: center;
+    list-style: none;
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#phase2-list>li {
+    padding-bottom: 20px;
+}
+
+#phase2-main {
+    list-style-type: none;
+}
+
+#phase2-main>li {
+    padding-bottom: 20px;
+}
+
+#result-div {
+    display: none;
+    border-radius: 25px;
+    border: 4px solid #d5e6ec;
+    background-color: #39a3cd;
+    color: white;
+    width: 90;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30px;
+}
+
+#location {
+    text-align: center;
+    font-size: larger;
+}
+
+#result-main {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#result-right {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#latest-response {
+    text-align: center;
+}
+
+#special-note {
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+
+.app-footer {
+    bottom: 0;
+    text-align: center;
+}
+
+#restart {
+    display: none;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    #special-note {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .result {
+        font-size: smaller;
+    }
+    #options-list {
+        flex-direction: column;
+        text-align: center;
+    }
+    #options-list>li {
+        padding-bottom: 15px;
+        width: 90%;
+    }
+    #options-list>li>button {
+        width: 90%;
+    }
+    .result {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .phase2 {
+        margin-left: -10%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    p {
+        font-size: 10px;
+    }
+}
